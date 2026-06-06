@@ -1,0 +1,7 @@
+# CodeGraph local index
+.codegraph/
+
+# AI temporary files
+.ai/tmp/
+.ai/cache/
+.ai/session_*.md
