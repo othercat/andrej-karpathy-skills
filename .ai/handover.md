@@ -7,7 +7,11 @@
 - CodeGraph is initialized and healthy for this repo.
 - This is a documentation/plugin guidance repo; CodeGraph has no code symbols to index, which is expected.
 - The local `CLAUDE.md` count was verified on 2026-06-06: 65 lines, 44 non-empty lines.
-- Codex global rules were updated in `C:\Users\other\.codex\AGENTS.md` with a concise "先澄清，少做，不乱碰，可验证" section.
+- Codex global rules were updated in `C:\Users\other\.codex\AGENTS.md` with a refined "全局工程纪律：先澄清，少做，不乱碰，可验证" section.
+- Global skills were created at:
+  - `C:\Users\other\.kimi\skills\karpathy-guidelines\SKILL.md` (Kimi Code)
+  - `C:\Users\other\.codex\skills\karpathy-guidelines\SKILL.md` (Codex)
+- `~/.kimi/config.toml` has `merge_all_available_skills = true`, so Kimi Code should auto-merge the new skill.
 
 ## Important Notes
 
@@ -20,4 +24,5 @@
 
 - If asked to publish, stage explicit files only after reviewing `git status -sb`.
 - If asked to adapt these rules elsewhere, prefer a compact merge into the target agent's existing rules rather than copying the full `CLAUDE.md` blindly.
+- If asked to verify the global skill is working, check that Kimi Code loads `karpathy-guidelines` skill on startup (look for it in the skill list or context).
 
