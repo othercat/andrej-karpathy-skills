@@ -15,10 +15,10 @@ Behavioral guidelines to reduce common LLM coding mistakes, derived from [Andrej
 **Don't assume. Don't hide confusion. Surface tradeoffs.**
 
 Before implementing:
-- State your assumptions explicitly. If uncertain, ask.
-- If multiple interpretations exist, present them - don't pick silently.
+- Resolve uncertainty from the task and repository first. State material assumptions and proceed on routine, reversible choices.
+- Ask when the missing answer changes behavior, compatibility, data ownership or authorization.
 - If a simpler approach exists, say so. Push back when warranted.
-- If something is unclear, stop. Name what's confusing. Ask.
+- If blocked, identify the missing fact and continue independent authorized work while waiting.
 
 ## 2. Simplicity First
 
@@ -52,7 +52,7 @@ The test: Every changed line should trace directly to the user's request.
 
 **Define success criteria. Loop until verified.**
 
-Transform tasks into verifiable goals:
+Define task success criteria (this does not create a persistent Codex Goal). Choose verification proportionate to the change; do not add tests that only mirror a low-impact edit or repeat passing checks without a new reason. Examples:
 - "Add validation" → "Write tests for invalid inputs, then make them pass"
 - "Fix the bug" → "Write a test that reproduces it, then make it pass"
 - "Refactor X" → "Ensure tests pass before and after"
